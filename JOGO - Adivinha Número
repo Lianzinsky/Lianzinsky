@@ -1,0 +1,20 @@
+#Jogo de Adivinhar Número v2
+from random import randint
+comp = randint(0, 10)
+print('Olá, jogador.')
+print('Esotu pensando em um número entre 0 e 10')
+print('Será que você consegue adivinha qual é?')
+acertou = False
+cont = 0
+while not acertou:
+    jogador = int(input('>> '))
+    cont += 1
+    if jogador == comp:
+        acertou = True
+    else:
+        if jogador < comp:
+            print('É mais')
+        elif jogador > comp:
+            print('É menos')
+print('ACERTOU! Eu pensei no número {}'.format(comp))
+print('Você ganhou com {} tentativa(s)'.format(cont))
